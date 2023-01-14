@@ -21,7 +21,7 @@ public final class Request: RequestProtocol {
     
     public func requestData(requestInfos: RequestInfos, completionHandler: @escaping (RequestResult) -> Void) {
         guard var url = URLComponents(string: "\(requestInfos.baseURL)\(requestInfos.endpoint)") else {
-            completionHandler(.failure(NSError()))
+            completionHandler(.failure(RequestErrors.invalidURL))
             return
         }
         
@@ -34,17 +34,19 @@ public final class Request: RequestProtocol {
         url.queryItems = components
         
         guard let finalURL = url.url else {
-            completionHandler(.failure(NSError()))
+            completionHandler(.failure(RequestErrors.invalidURL))
             return
         }
         
-        session.dataTask(with: finalURL) { data, resp, error in
+        let request = URLRequest(url: finalURL)
+        session.dataTask(with: request) { data, resp, error in
             if let error = error {
                 completionHandler(.failure(error))
+                return
             }
             
             guard let data = data, let resp = resp else {
-                completionHandler(.failure(NSError()))
+                completionHandler(.failure(RequestErrors.invalidData))
                 return
             }
             
@@ -52,4 +54,10 @@ public final class Request: RequestProtocol {
 
         }.resume()
     }
+}
+
+public enum RequestErrors: Error {
+    case invalidURL
+    case connectivity
+    case invalidData
 }
