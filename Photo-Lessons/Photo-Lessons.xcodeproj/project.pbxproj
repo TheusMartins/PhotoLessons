@@ -21,6 +21,7 @@
 		D1F12A8D2972CE7C0076502F /* RequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F12A8C2972CE7C0076502F /* RequestProtocol.swift */; };
 		D1F12A8E2972CE7C0076502F /* RequestInfos.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F12A8B2972CE7C0076502F /* RequestInfos.swift */; };
 		D1F12A91297341B00076502F /* XCTestCase+MemoryLeakTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F12A90297341B00076502F /* XCTestCase+MemoryLeakTracking.swift */; };
+		D1F12A93297342550076502F /* RequestProtocolSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F12A92297342550076502F /* RequestProtocolSpy.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,7 @@
 		D1F12A8B2972CE7C0076502F /* RequestInfos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestInfos.swift; sourceTree = "<group>"; };
 		D1F12A8C2972CE7C0076502F /* RequestProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestProtocol.swift; sourceTree = "<group>"; };
 		D1F12A90297341B00076502F /* XCTestCase+MemoryLeakTracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+MemoryLeakTracking.swift"; sourceTree = "<group>"; };
+		D1F12A92297342550076502F /* RequestProtocolSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestProtocolSpy.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,6 +194,7 @@
 			isa = PBXGroup;
 			children = (
 				D1F12A90297341B00076502F /* XCTestCase+MemoryLeakTracking.swift */,
+				D1F12A92297342550076502F /* RequestProtocolSpy.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -433,6 +436,7 @@
 			files = (
 				D1F12A832972C9EE0076502F /* RequestProtocolTests.swift in Sources */,
 				D1F12A91297341B00076502F /* XCTestCase+MemoryLeakTracking.swift in Sources */,
+				D1F12A93297342550076502F /* RequestProtocolSpy.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
