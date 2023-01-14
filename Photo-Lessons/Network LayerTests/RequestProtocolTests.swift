@@ -60,10 +60,12 @@ final class RequestProtocolTests: XCTestCase {
 
     
     // Helpers
-    func createSUT(isSuccessScenario: Bool = true) -> (Request, RequestProtocolSpy) {
+    func createSUT(isSuccessScenario: Bool = true, file: StaticString = #filePath, line: UInt = #line) -> (Request, RequestProtocolSpy) {
         let requestSpy = RequestProtocolSpy()
         requestSpy.shouldBeSuccess = isSuccessScenario
         let sut = Request(session: requestSpy)
+        trackForMemoryLeaks(sut, file: file, line: line)
+        trackForMemoryLeaks(requestSpy, file: file, line: line)
         return (sut, requestSpy)
     }
 }
@@ -71,11 +73,7 @@ final class RequestProtocolTests: XCTestCase {
 final class RequestProtocolSpy: URLSession {
     var requests = [(request: URLRequest, completion: (Data?, URLResponse?, Error?) -> Void)]()
     
-    var shouldBeSuccess = true {
-        didSet {
-            print("Pastel")
-        }
-    }
+    var shouldBeSuccess = true
 
     override func dataTask(with request: URLRequest, completionHandler: @escaping (Data?, URLResponse?, Swift.Error?) -> Void) -> URLSessionDataTask {
         let response: (Data?, URLResponse?, Error?) = shouldBeSuccess ? (Data("some data".utf8),
