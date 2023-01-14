@@ -7,15 +7,15 @@
 
 import Foundation
 
-struct LessonsModel: Decodable {
-    let lessons: [Lesson]
+public struct LessonsModel: Decodable {
+    public let lessons: [Lesson]
 }
 
-struct Lesson: Decodable {
-    let id: Int
-    let name: String
-    let thumbnail: String
-    let videoURL: String
+public struct Lesson: Decodable {
+    public let id: Int
+    public let name: String
+    public let thumbnail: String
+    public let videoURL: String
     
     enum CodingKeys: String, CodingKey {
         case id

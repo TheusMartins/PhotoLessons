@@ -14,6 +14,10 @@
 		D1D89B0929736E5C00141E0E /* LessonsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D89B0829736E5C00141E0E /* LessonsModel.swift */; };
 		D1D89B0A29736F4E00141E0E /* LessonsList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1D89AF129736DDE00141E0E /* LessonsList.framework */; };
 		D1D89B0B29736F4E00141E0E /* LessonsList.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D1D89AF129736DDE00141E0E /* LessonsList.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D1D89B0E29736F7700141E0E /* Network_Layer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1F12A742972C9ED0076502F /* Network_Layer.framework */; };
+		D1D89B0F29736F7700141E0E /* Network_Layer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D1F12A742972C9ED0076502F /* Network_Layer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D1D89B1429736F9400141E0E /* LessonsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D89B1329736F9400141E0E /* LessonsViewModel.swift */; };
+		D1D89B1629736FA600141E0E /* LessonsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D89B1529736FA600141E0E /* LessonsService.swift */; };
 		D1F12A462972C7D80076502F /* Photo_LessonsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F12A452972C7D80076502F /* Photo_LessonsApp.swift */; };
 		D1F12A482972C7D80076502F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F12A472972C7D80076502F /* ContentView.swift */; };
 		D1F12A4A2972C7D90076502F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1F12A492972C7D90076502F /* Assets.xcassets */; };
@@ -48,6 +52,13 @@
 			remoteGlobalIDString = D1D89AF029736DDE00141E0E;
 			remoteInfo = LessonsList;
 		};
+		D1D89B1029736F7700141E0E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D1F12A3A2972C7D80076502F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D1F12A732972C9ED0076502F;
+			remoteInfo = "Network Layer";
+		};
 		D1F12A532972C7D90076502F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D1F12A3A2972C7D80076502F /* Project object */;
@@ -79,6 +90,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		D1D89B1229736F7700141E0E /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				D1D89B0F29736F7700141E0E /* Network_Layer.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D1F12AA6297344F80076502F /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -100,6 +122,8 @@
 		D1D89AFA29736DDE00141E0E /* LessonsListTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LessonsListTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1D89AFF29736DDE00141E0E /* LessonsListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonsListTests.swift; sourceTree = "<group>"; };
 		D1D89B0829736E5C00141E0E /* LessonsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonsModel.swift; sourceTree = "<group>"; };
+		D1D89B1329736F9400141E0E /* LessonsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonsViewModel.swift; sourceTree = "<group>"; };
+		D1D89B1529736FA600141E0E /* LessonsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonsService.swift; sourceTree = "<group>"; };
 		D1F12A422972C7D80076502F /* Photo-Lessons.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Photo-Lessons.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1F12A452972C7D80076502F /* Photo_LessonsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo_LessonsApp.swift; sourceTree = "<group>"; };
 		D1F12A472972C7D80076502F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -126,6 +150,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1D89B0E29736F7700141E0E /* Network_Layer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -184,6 +209,8 @@
 				D1D89AF329736DDE00141E0E /* LessonsList.h */,
 				D1D89AF429736DDE00141E0E /* LessonsList.docc */,
 				D1D89B0829736E5C00141E0E /* LessonsModel.swift */,
+				D1D89B1329736F9400141E0E /* LessonsViewModel.swift */,
+				D1D89B1529736FA600141E0E /* LessonsService.swift */,
 			);
 			path = LessonsList;
 			sourceTree = "<group>";
@@ -327,10 +354,12 @@
 				D1D89AED29736DDE00141E0E /* Sources */,
 				D1D89AEE29736DDE00141E0E /* Frameworks */,
 				D1D89AEF29736DDE00141E0E /* Resources */,
+				D1D89B1229736F7700141E0E /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				D1D89B1129736F7700141E0E /* PBXTargetDependency */,
 			);
 			name = LessonsList;
 			productName = LessonsList;
@@ -566,7 +595,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				D1D89AF529736DDE00141E0E /* LessonsList.docc in Sources */,
+				D1D89B1429736F9400141E0E /* LessonsViewModel.swift in Sources */,
 				D1D89B0929736E5C00141E0E /* LessonsModel.swift in Sources */,
+				D1D89B1629736FA600141E0E /* LessonsService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -636,6 +667,11 @@
 			isa = PBXTargetDependency;
 			target = D1D89AF029736DDE00141E0E /* LessonsList */;
 			targetProxy = D1D89B0C29736F4E00141E0E /* PBXContainerItemProxy */;
+		};
+		D1D89B1129736F7700141E0E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D1F12A732972C9ED0076502F /* Network Layer */;
+			targetProxy = D1D89B1029736F7700141E0E /* PBXContainerItemProxy */;
 		};
 		D1F12A542972C7D90076502F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
