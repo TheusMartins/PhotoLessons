@@ -11,6 +11,9 @@
 		D1D89AFB29736DDE00141E0E /* LessonsList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1D89AF129736DDE00141E0E /* LessonsList.framework */; };
 		D1D89B0029736DDE00141E0E /* LessonsListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D89AFF29736DDE00141E0E /* LessonsListTests.swift */; };
 		D1D89B0129736DDE00141E0E /* LessonsList.h in Headers */ = {isa = PBXBuildFile; fileRef = D1D89AF329736DDE00141E0E /* LessonsList.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D1D89B0929736E5C00141E0E /* LessonsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D89B0829736E5C00141E0E /* LessonsModel.swift */; };
+		D1D89B0A29736F4E00141E0E /* LessonsList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1D89AF129736DDE00141E0E /* LessonsList.framework */; };
+		D1D89B0B29736F4E00141E0E /* LessonsList.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D1D89AF129736DDE00141E0E /* LessonsList.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D1F12A462972C7D80076502F /* Photo_LessonsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F12A452972C7D80076502F /* Photo_LessonsApp.swift */; };
 		D1F12A482972C7D80076502F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F12A472972C7D80076502F /* ContentView.swift */; };
 		D1F12A4A2972C7D90076502F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1F12A492972C7D90076502F /* Assets.xcassets */; };
@@ -32,6 +35,13 @@
 
 /* Begin PBXContainerItemProxy section */
 		D1D89AFC29736DDE00141E0E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D1F12A3A2972C7D80076502F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D1D89AF029736DDE00141E0E;
+			remoteInfo = LessonsList;
+		};
+		D1D89B0C29736F4E00141E0E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D1F12A3A2972C7D80076502F /* Project object */;
 			proxyType = 1;
@@ -75,6 +85,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				D1D89B0B29736F4E00141E0E /* LessonsList.framework in Embed Frameworks */,
 				D1F12AA3297344F80076502F /* Network_Layer.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -88,6 +99,7 @@
 		D1D89AF429736DDE00141E0E /* LessonsList.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = LessonsList.docc; sourceTree = "<group>"; };
 		D1D89AFA29736DDE00141E0E /* LessonsListTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LessonsListTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1D89AFF29736DDE00141E0E /* LessonsListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonsListTests.swift; sourceTree = "<group>"; };
+		D1D89B0829736E5C00141E0E /* LessonsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonsModel.swift; sourceTree = "<group>"; };
 		D1F12A422972C7D80076502F /* Photo-Lessons.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Photo-Lessons.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1F12A452972C7D80076502F /* Photo_LessonsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo_LessonsApp.swift; sourceTree = "<group>"; };
 		D1F12A472972C7D80076502F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -129,6 +141,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1D89B0A29736F4E00141E0E /* LessonsList.framework in Frameworks */,
 				D1F12AA2297344F80076502F /* Network_Layer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -170,6 +183,7 @@
 			children = (
 				D1D89AF329736DDE00141E0E /* LessonsList.h */,
 				D1D89AF429736DDE00141E0E /* LessonsList.docc */,
+				D1D89B0829736E5C00141E0E /* LessonsModel.swift */,
 			);
 			path = LessonsList;
 			sourceTree = "<group>";
@@ -354,6 +368,7 @@
 			);
 			dependencies = (
 				D1F12AA5297344F80076502F /* PBXTargetDependency */,
+				D1D89B0D29736F4E00141E0E /* PBXTargetDependency */,
 			);
 			name = "Photo-Lessons";
 			productName = "Photo-Lessons";
@@ -551,6 +566,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D1D89AF529736DDE00141E0E /* LessonsList.docc in Sources */,
+				D1D89B0929736E5C00141E0E /* LessonsModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -615,6 +631,11 @@
 			isa = PBXTargetDependency;
 			target = D1D89AF029736DDE00141E0E /* LessonsList */;
 			targetProxy = D1D89AFC29736DDE00141E0E /* PBXContainerItemProxy */;
+		};
+		D1D89B0D29736F4E00141E0E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D1D89AF029736DDE00141E0E /* LessonsList */;
+			targetProxy = D1D89B0C29736F4E00141E0E /* PBXContainerItemProxy */;
 		};
 		D1F12A542972C7D90076502F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -714,6 +735,7 @@
 		D1D89B0629736DDE00141E0E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -730,6 +752,7 @@
 		D1D89B0729736DDE00141E0E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
