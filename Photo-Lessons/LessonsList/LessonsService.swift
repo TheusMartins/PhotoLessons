@@ -7,9 +7,13 @@
 
 import Network_Layer
 
+enum LessonsListErrors: Error {
+    case invalidData
+}
+
 public protocol LessonsService {
     func getLessons(request: RequestInfos,
-                    completion: @escaping (Result<[LessonsModel], Error>) -> Void)
+                    completion: @escaping (Result<LessonsModel, Error>) -> Void)
 }
 
 final class LessonsServiceImplementation: LessonsService {
@@ -19,20 +23,24 @@ final class LessonsServiceImplementation: LessonsService {
         self.requester = requester
     }
     
-    func getLessons(request: RequestInfos, completion: @escaping (Result<[LessonsModel], Error>) -> Void) {
+    func getLessons(request: RequestInfos, completion: @escaping (Result<LessonsModel, Error>) -> Void) {
         requester.requestData(requestInfos: request) { [weak self] result in
             guard let self = self else { return }
             switch result {
             case let .success((data, _)):
-                completion(.success(self.mapDataToLessons(data: data)))
+                guard let lessons = self.mapDataToLessons(data: data) else {
+                    completion(.failure(LessonsListErrors.invalidData))
+                    return
+                }
+                completion(.success(lessons))
             case let .failure(error):
                 completion(.failure(error))
             }
         }
     }
     
-    private func mapDataToLessons(data: Data) -> [LessonsModel] {
-        guard let lessons = try? JSONDecoder().decode([LessonsModel].self, from: data) else { return [] }
+    private func mapDataToLessons(data: Data) -> LessonsModel? {
+        guard let lessons = try? JSONDecoder().decode(LessonsModel.self, from: data) else { return nil }
         return lessons
     }
 }
