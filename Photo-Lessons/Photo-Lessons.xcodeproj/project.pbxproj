@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D1D89AF529736DDE00141E0E /* LessonsList.docc in Sources */ = {isa = PBXBuildFile; fileRef = D1D89AF429736DDE00141E0E /* LessonsList.docc */; };
+		D1D89AFB29736DDE00141E0E /* LessonsList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1D89AF129736DDE00141E0E /* LessonsList.framework */; };
+		D1D89B0029736DDE00141E0E /* LessonsListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D89AFF29736DDE00141E0E /* LessonsListTests.swift */; };
+		D1D89B0129736DDE00141E0E /* LessonsList.h in Headers */ = {isa = PBXBuildFile; fileRef = D1D89AF329736DDE00141E0E /* LessonsList.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D1F12A462972C7D80076502F /* Photo_LessonsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F12A452972C7D80076502F /* Photo_LessonsApp.swift */; };
 		D1F12A482972C7D80076502F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F12A472972C7D80076502F /* ContentView.swift */; };
 		D1F12A4A2972C7D90076502F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1F12A492972C7D90076502F /* Assets.xcassets */; };
@@ -22,9 +26,18 @@
 		D1F12A8E2972CE7C0076502F /* RequestInfos.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F12A8B2972CE7C0076502F /* RequestInfos.swift */; };
 		D1F12A91297341B00076502F /* XCTestCase+MemoryLeakTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F12A90297341B00076502F /* XCTestCase+MemoryLeakTracking.swift */; };
 		D1F12A93297342550076502F /* RequestProtocolSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F12A92297342550076502F /* RequestProtocolSpy.swift */; };
+		D1F12AA2297344F80076502F /* Network_Layer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1F12A742972C9ED0076502F /* Network_Layer.framework */; };
+		D1F12AA3297344F80076502F /* Network_Layer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D1F12A742972C9ED0076502F /* Network_Layer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		D1D89AFC29736DDE00141E0E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D1F12A3A2972C7D80076502F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D1D89AF029736DDE00141E0E;
+			remoteInfo = LessonsList;
+		};
 		D1F12A532972C7D90076502F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D1F12A3A2972C7D80076502F /* Project object */;
@@ -46,9 +59,35 @@
 			remoteGlobalIDString = D1F12A732972C9ED0076502F;
 			remoteInfo = "Network Layer";
 		};
+		D1F12AA4297344F80076502F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D1F12A3A2972C7D80076502F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D1F12A732972C9ED0076502F;
+			remoteInfo = "Network Layer";
+		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		D1F12AA6297344F80076502F /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				D1F12AA3297344F80076502F /* Network_Layer.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		D1D89AF129736DDE00141E0E /* LessonsList.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LessonsList.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D1D89AF329736DDE00141E0E /* LessonsList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LessonsList.h; sourceTree = "<group>"; };
+		D1D89AF429736DDE00141E0E /* LessonsList.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = LessonsList.docc; sourceTree = "<group>"; };
+		D1D89AFA29736DDE00141E0E /* LessonsListTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LessonsListTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D1D89AFF29736DDE00141E0E /* LessonsListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonsListTests.swift; sourceTree = "<group>"; };
 		D1F12A422972C7D80076502F /* Photo-Lessons.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Photo-Lessons.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1F12A452972C7D80076502F /* Photo_LessonsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo_LessonsApp.swift; sourceTree = "<group>"; };
 		D1F12A472972C7D80076502F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -71,10 +110,26 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		D1D89AEE29736DDE00141E0E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D1D89AF729736DDE00141E0E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D1D89AFB29736DDE00141E0E /* LessonsList.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D1F12A3F2972C7D80076502F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1F12AA2297344F80076502F /* Network_Layer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,6 +165,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D1D89AF229736DDE00141E0E /* LessonsList */ = {
+			isa = PBXGroup;
+			children = (
+				D1D89AF329736DDE00141E0E /* LessonsList.h */,
+				D1D89AF429736DDE00141E0E /* LessonsList.docc */,
+			);
+			path = LessonsList;
+			sourceTree = "<group>";
+		};
+		D1D89AFE29736DDE00141E0E /* LessonsListTests */ = {
+			isa = PBXGroup;
+			children = (
+				D1D89AFF29736DDE00141E0E /* LessonsListTests.swift */,
+			);
+			path = LessonsListTests;
+			sourceTree = "<group>";
+		};
 		D1F12A392972C7D80076502F = {
 			isa = PBXGroup;
 			children = (
@@ -118,7 +190,10 @@
 				D1F12A5F2972C7D90076502F /* Photo-LessonsUITests */,
 				D1F12A752972C9ED0076502F /* Network Layer */,
 				D1F12A812972C9EE0076502F /* Network LayerTests */,
+				D1D89AF229736DDE00141E0E /* LessonsList */,
+				D1D89AFE29736DDE00141E0E /* LessonsListTests */,
 				D1F12A432972C7D80076502F /* Products */,
+				D1F12A94297343710076502F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -130,6 +205,8 @@
 				D1F12A5C2972C7D90076502F /* Photo-LessonsUITests.xctest */,
 				D1F12A742972C9ED0076502F /* Network_Layer.framework */,
 				D1F12A7D2972C9EE0076502F /* Network LayerTests.xctest */,
+				D1D89AF129736DDE00141E0E /* LessonsList.framework */,
+				D1D89AFA29736DDE00141E0E /* LessonsListTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -199,9 +276,24 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		D1F12A94297343710076502F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		D1D89AEC29736DDE00141E0E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D1D89B0129736DDE00141E0E /* LessonsList.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D1F12A6F2972C9ED0076502F /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -213,6 +305,42 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		D1D89AF029736DDE00141E0E /* LessonsList */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D1D89B0229736DDE00141E0E /* Build configuration list for PBXNativeTarget "LessonsList" */;
+			buildPhases = (
+				D1D89AEC29736DDE00141E0E /* Headers */,
+				D1D89AED29736DDE00141E0E /* Sources */,
+				D1D89AEE29736DDE00141E0E /* Frameworks */,
+				D1D89AEF29736DDE00141E0E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LessonsList;
+			productName = LessonsList;
+			productReference = D1D89AF129736DDE00141E0E /* LessonsList.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		D1D89AF929736DDE00141E0E /* LessonsListTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D1D89B0529736DDE00141E0E /* Build configuration list for PBXNativeTarget "LessonsListTests" */;
+			buildPhases = (
+				D1D89AF629736DDE00141E0E /* Sources */,
+				D1D89AF729736DDE00141E0E /* Frameworks */,
+				D1D89AF829736DDE00141E0E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D1D89AFD29736DDE00141E0E /* PBXTargetDependency */,
+			);
+			name = LessonsListTests;
+			productName = LessonsListTests;
+			productReference = D1D89AFA29736DDE00141E0E /* LessonsListTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		D1F12A412972C7D80076502F /* Photo-Lessons */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = D1F12A662972C7D90076502F /* Build configuration list for PBXNativeTarget "Photo-Lessons" */;
@@ -220,10 +348,12 @@
 				D1F12A3E2972C7D80076502F /* Sources */,
 				D1F12A3F2972C7D80076502F /* Frameworks */,
 				D1F12A402972C7D80076502F /* Resources */,
+				D1F12AA6297344F80076502F /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				D1F12AA5297344F80076502F /* PBXTargetDependency */,
 			);
 			name = "Photo-Lessons";
 			productName = "Photo-Lessons";
@@ -312,6 +442,12 @@
 				LastSwiftUpdateCheck = 1420;
 				LastUpgradeCheck = 1420;
 				TargetAttributes = {
+					D1D89AF029736DDE00141E0E = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					D1D89AF929736DDE00141E0E = {
+						CreatedOnToolsVersion = 14.2;
+					};
 					D1F12A412972C7D80076502F = {
 						CreatedOnToolsVersion = 14.2;
 					};
@@ -349,11 +485,27 @@
 				D1F12A5B2972C7D90076502F /* Photo-LessonsUITests */,
 				D1F12A732972C9ED0076502F /* Network Layer */,
 				D1F12A7C2972C9EE0076502F /* Network LayerTests */,
+				D1D89AF029736DDE00141E0E /* LessonsList */,
+				D1D89AF929736DDE00141E0E /* LessonsListTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		D1D89AEF29736DDE00141E0E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D1D89AF829736DDE00141E0E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D1F12A402972C7D80076502F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -394,6 +546,22 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		D1D89AED29736DDE00141E0E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D1D89AF529736DDE00141E0E /* LessonsList.docc in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D1D89AF629736DDE00141E0E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D1D89B0029736DDE00141E0E /* LessonsListTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D1F12A3E2972C7D80076502F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -443,6 +611,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		D1D89AFD29736DDE00141E0E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D1D89AF029736DDE00141E0E /* LessonsList */;
+			targetProxy = D1D89AFC29736DDE00141E0E /* PBXContainerItemProxy */;
+		};
 		D1F12A542972C7D90076502F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = D1F12A412972C7D80076502F /* Photo-Lessons */;
@@ -458,9 +631,118 @@
 			target = D1F12A732972C9ED0076502F /* Network Layer */;
 			targetProxy = D1F12A7F2972C9EE0076502F /* PBXContainerItemProxy */;
 		};
+		D1F12AA5297344F80076502F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D1F12A732972C9ED0076502F /* Network Layer */;
+			targetProxy = D1F12AA4297344F80076502F /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		D1D89B0329736DDE00141E0E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Matheus-Martins.LessonsList";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D1D89B0429736DDE00141E0E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Matheus-Martins.LessonsList";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D1D89B0629736DDE00141E0E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Matheus-Martins.LessonsListTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		D1D89B0729736DDE00141E0E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Matheus-Martins.LessonsListTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 		D1F12A642972C7D90076502F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -588,8 +870,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -616,8 +898,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -639,7 +921,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Matheus-Martins.Photo-LessonsTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -658,7 +940,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Matheus-Martins.Photo-LessonsTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -716,6 +998,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -727,8 +1010,12 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -747,6 +1034,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -758,8 +1046,12 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -802,6 +1094,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		D1D89B0229736DDE00141E0E /* Build configuration list for PBXNativeTarget "LessonsList" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D1D89B0329736DDE00141E0E /* Debug */,
+				D1D89B0429736DDE00141E0E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D1D89B0529736DDE00141E0E /* Build configuration list for PBXNativeTarget "LessonsListTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D1D89B0629736DDE00141E0E /* Debug */,
+				D1D89B0729736DDE00141E0E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		D1F12A3D2972C7D80076502F /* Build configuration list for PBXProject "Photo-Lessons" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
