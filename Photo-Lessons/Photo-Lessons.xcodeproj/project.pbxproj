@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D147683E2974A54C00F29DE0 /* LessonDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D147683D2974A54C00F29DE0 /* LessonDetailViewController.swift */; };
 		D1D89AF529736DDE00141E0E /* LessonsList.docc in Sources */ = {isa = PBXBuildFile; fileRef = D1D89AF429736DDE00141E0E /* LessonsList.docc */; };
 		D1D89AFB29736DDE00141E0E /* LessonsList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1D89AF129736DDE00141E0E /* LessonsList.framework */; };
 		D1D89B0029736DDE00141E0E /* LessonsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D89AFF29736DDE00141E0E /* LessonsViewModelTests.swift */; };
@@ -118,6 +119,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		D147683D2974A54C00F29DE0 /* LessonDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonDetailViewController.swift; sourceTree = "<group>"; };
 		D1D89AF129736DDE00141E0E /* LessonsList.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LessonsList.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1D89AF329736DDE00141E0E /* LessonsList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LessonsList.h; sourceTree = "<group>"; };
 		D1D89AF429736DDE00141E0E /* LessonsList.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = LessonsList.docc; sourceTree = "<group>"; };
@@ -265,6 +267,7 @@
 				D1F12A472972C7D80076502F /* LessonsListView.swift */,
 				D1F12A492972C7D90076502F /* Assets.xcassets */,
 				D1F12A4B2972C7D90076502F /* Preview Content */,
+				D147683D2974A54C00F29DE0 /* LessonDetailViewController.swift */,
 			);
 			path = "Photo-Lessons";
 			sourceTree = "<group>";
@@ -621,6 +624,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D147683E2974A54C00F29DE0 /* LessonDetailViewController.swift in Sources */,
 				D1F12A482972C7D80076502F /* LessonsListView.swift in Sources */,
 				D1F12A462972C7D80076502F /* Photo_LessonsApp.swift in Sources */,
 			);

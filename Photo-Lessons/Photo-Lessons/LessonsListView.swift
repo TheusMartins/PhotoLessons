@@ -9,7 +9,16 @@ import SwiftUI
 import LessonsList
 
 struct LessonsListView: View {
-    @StateObject var viewModel = LessonsViewModel()
+    @StateObject private var viewModel = LessonsViewModel()
+    
+    init() {
+        UINavigationBar.appearance().backgroundColor = .darkGray
+        //Use this if NavigationBarTitle is with Large Font
+        UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.white]
+        
+        //Use this if NavigationBarTitle is with displayMode = .inline
+        UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor.white]
+    }
     
     var body: some View {
         NavigationView {
@@ -19,7 +28,7 @@ struct LessonsListView: View {
             case let .feedLessons(lessons):
                 List(lessons, id: \.id) { item in
                     NavigationLink {
-                        EmptyView()
+                        LessonDetailView()
                     } label: {
                         HStack {
                             AsyncImage(url: URL(string: item.thumbnail)) { image in
@@ -32,18 +41,22 @@ struct LessonsListView: View {
                             } placeholder: {
                                 ProgressView()
                             }
-                                
+                            
                             
                             Text(item.name)
                                 .font(.subheadline)
                                 .fontWeight(.semibold)
                                 .lineLimit(3)
+                                .foregroundColor(Color.white)
                         }
+                        .background(Color.init(uiColor: UIColor.darkGray))
                     }
-
-                    
+                    .background(Color.init(uiColor: UIColor.darkGray))
+                    .listRowBackground(Color.init(uiColor: UIColor.darkGray))
+                    .accentColor(Color.blue)
                 }
-                .navigationTitle("Lessons")
+                .padding(.all, -20)
+                .navigationBarTitle("Lessons", displayMode: .automatic)
             case let .showError(errorMessage):
                 Text(errorMessage)
                     .font(.title2)
