@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import LessonsList
 
 final class LessonDetailView: UIView {
     private lazy var lessonImage: UIImageView = {
@@ -51,10 +52,10 @@ final class LessonDetailView: UIView {
         return button
     }()
     
-    init(title: String, description: String) {
+    init(lesson: LessonUIModel) {
         super.init(frame: .zero)
-        self.lessonTitle.text = title
-        self.lessonDescription.text = description
+        self.lessonTitle.text = lesson.name
+        self.lessonDescription.text = lesson.descripion
         setupViewConfiguration()
     }
     
