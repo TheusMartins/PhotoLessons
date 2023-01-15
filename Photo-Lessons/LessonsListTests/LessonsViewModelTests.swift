@@ -14,7 +14,7 @@ final class LessonsViewModelTests: XCTestCase {
     func test_shouldRequestLessonsOnInit() {
         // Given + When
         let spy = LessonsViewServiceSpy()
-        let sut = LessonsViewModel(service: spy) { _ in }
+        let _ = LessonsViewModel(service: spy) { _ in }
         
         XCTAssertEqual(spy.numberOfCalls, 1)
     }
@@ -32,8 +32,8 @@ final class LessonsViewModelTests: XCTestCase {
                 loadingStates.append(isLoading)
                 exp2.fulfill()
             case let .feedLessons(model):
-                XCTAssertEqual(model.lessons.count, 2)
-                XCTAssertEqual(model.lessons.last?.name, "Lesson 2")
+                XCTAssertEqual(model.count, 2)
+                XCTAssertEqual(model.last?.name, "Lesson 2")
                 exp.fulfill()
             case .showError:
                 XCTFail("Expected success scenario but got \(viewState) instead")
@@ -50,7 +50,7 @@ final class LessonsViewModelTests: XCTestCase {
         var loadingStates: [Bool] = []
         let spy = LessonsViewServiceSpy()
         spy.shouldThrowError = true
-        let exp = expectation(description: "Waiting for srror state")
+        let exp = expectation(description: "Waiting for error state")
         let exp2 = expectation(description: "Waiting for isLoading states")
         exp2.expectedFulfillmentCount = 2
         let _ = LessonsViewModel(service: spy) { viewState in
@@ -80,8 +80,8 @@ final class LessonsViewServiceSpy: LessonsService {
         numberOfCalls += 1
         shouldThrowError ? completion(.failure(NSError(domain: "Test", code: 1))) :
         completion(.success(LessonsModel(lessons: [
-            Lesson(id: 0, name: "Lesson 1", thumbnail: "https://a-url.com", videoURL: "https://another-url.com"),
-            Lesson(id: 1, name: "Lesson 2", thumbnail: "https://a-url.com", videoURL: "https://another-url.com"),
+                Lesson(id: 0, name: "Lesson 1", thumbnail: "https://a-url.com", videoURL: "https://another-url.com"),
+                Lesson(id: 1, name: "Lesson 2", thumbnail: "https://a-url.com", videoURL: "https://another-url.com"),
             ]))
         )
     }

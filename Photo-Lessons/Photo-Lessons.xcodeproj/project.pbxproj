@@ -19,8 +19,9 @@
 		D1D89B1429736F9400141E0E /* LessonsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D89B1329736F9400141E0E /* LessonsViewModel.swift */; };
 		D1D89B1629736FA600141E0E /* LessonsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D89B1529736FA600141E0E /* LessonsService.swift */; };
 		D1F0B9E2297374BE002076E7 /* LessonsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F0B9E1297374BE002076E7 /* LessonsRequest.swift */; };
+		D1F0B9E429737ED7002076E7 /* LessonsUIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F0B9E329737ED7002076E7 /* LessonsUIModel.swift */; };
 		D1F12A462972C7D80076502F /* Photo_LessonsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F12A452972C7D80076502F /* Photo_LessonsApp.swift */; };
-		D1F12A482972C7D80076502F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F12A472972C7D80076502F /* ContentView.swift */; };
+		D1F12A482972C7D80076502F /* LessonsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F12A472972C7D80076502F /* LessonsListView.swift */; };
 		D1F12A4A2972C7D90076502F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1F12A492972C7D90076502F /* Assets.xcassets */; };
 		D1F12A4D2972C7D90076502F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1F12A4C2972C7D90076502F /* Preview Assets.xcassets */; };
 		D1F12A572972C7D90076502F /* Photo_LessonsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F12A562972C7D90076502F /* Photo_LessonsTests.swift */; };
@@ -126,9 +127,10 @@
 		D1D89B1329736F9400141E0E /* LessonsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonsViewModel.swift; sourceTree = "<group>"; };
 		D1D89B1529736FA600141E0E /* LessonsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonsService.swift; sourceTree = "<group>"; };
 		D1F0B9E1297374BE002076E7 /* LessonsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonsRequest.swift; sourceTree = "<group>"; };
+		D1F0B9E329737ED7002076E7 /* LessonsUIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonsUIModel.swift; sourceTree = "<group>"; };
 		D1F12A422972C7D80076502F /* Photo-Lessons.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Photo-Lessons.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1F12A452972C7D80076502F /* Photo_LessonsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo_LessonsApp.swift; sourceTree = "<group>"; };
-		D1F12A472972C7D80076502F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		D1F12A472972C7D80076502F /* LessonsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonsListView.swift; sourceTree = "<group>"; };
 		D1F12A492972C7D90076502F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D1F12A4C2972C7D90076502F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D1F12A522972C7D90076502F /* Photo-LessonsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Photo-LessonsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -214,6 +216,7 @@
 				D1D89B1329736F9400141E0E /* LessonsViewModel.swift */,
 				D1D89B1529736FA600141E0E /* LessonsService.swift */,
 				D1F0B9E1297374BE002076E7 /* LessonsRequest.swift */,
+				D1F0B9E329737ED7002076E7 /* LessonsUIModel.swift */,
 			);
 			path = LessonsList;
 			sourceTree = "<group>";
@@ -259,7 +262,7 @@
 			isa = PBXGroup;
 			children = (
 				D1F12A452972C7D80076502F /* Photo_LessonsApp.swift */,
-				D1F12A472972C7D80076502F /* ContentView.swift */,
+				D1F12A472972C7D80076502F /* LessonsListView.swift */,
 				D1F12A492972C7D90076502F /* Assets.xcassets */,
 				D1F12A4B2972C7D90076502F /* Preview Content */,
 			);
@@ -602,6 +605,7 @@
 				D1D89B1429736F9400141E0E /* LessonsViewModel.swift in Sources */,
 				D1D89B0929736E5C00141E0E /* LessonsModel.swift in Sources */,
 				D1D89B1629736FA600141E0E /* LessonsService.swift in Sources */,
+				D1F0B9E429737ED7002076E7 /* LessonsUIModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -617,7 +621,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D1F12A482972C7D80076502F /* ContentView.swift in Sources */,
+				D1F12A482972C7D80076502F /* LessonsListView.swift in Sources */,
 				D1F12A462972C7D80076502F /* Photo_LessonsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -934,7 +938,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -962,7 +966,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

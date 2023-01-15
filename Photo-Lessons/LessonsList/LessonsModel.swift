@@ -8,14 +8,17 @@
 import Foundation
 
 public struct LessonsModel: Decodable {
-    public let lessons: [Lesson]
+    let lessons: [Lesson]
+    var uiModel: [LessonUIModel] {
+        lessons.map { LessonUIModel(id: $0.id, name: $0.name, thumbnail: $0.thumbnail, videoURL: $0.videoURL) }
+    }
 }
 
-public struct Lesson: Decodable {
-    public let id: Int
-    public let name: String
-    public let thumbnail: String
-    public let videoURL: String
+struct Lesson: Decodable {
+    let id: Int
+    let name: String
+    let thumbnail: String
+    let videoURL: String
     
     enum CodingKeys: String, CodingKey {
         case id

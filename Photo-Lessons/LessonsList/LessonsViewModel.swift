@@ -5,34 +5,40 @@
 //  Created by Matheus Martins on 14/01/23.
 //
 
-final class LessonsViewModel {
+public final class LessonsViewModel: ObservableObject {
     private let service: LessonsService
-    private let viewUpdater: (LessonsListStates) -> Void
     
-    enum LessonsListStates {
-        case isLoading(Bool)
-        case feedLessons(LessonsModel)
+    @Published public var state: LessonsListStates = .isLoading
+    
+    public enum LessonsListStates {
+        case isLoading
+        case feedLessons([LessonUIModel])
         case showError(errorMessage: String)
     }
     
-    init(service: LessonsService = LessonsServiceImplementation(),
-         viewUpdater: @escaping (LessonsListStates) -> Void) {
+    public init(service: LessonsService = LessonsServiceImplementation()) {
         self.service = service
-        self.viewUpdater = viewUpdater
         getLessons()
     }
     
     private func getLessons() {
-        viewUpdater(.isLoading(true))
+        state = .isLoading
         service.getLessons(request: LessonsRequest.getLessons) { [weak self] result in
             guard let self = self else { return }
             switch result {
             case let .success(model):
-                self.viewUpdater(.feedLessons(model))
+                self.feedLessons(lessons: model.uiModel)
             case let .failure(error):
-                self.viewUpdater(.showError(errorMessage: error.localizedDescription))
+                self.state = .showError(errorMessage: error.localizedDescription)
             }
-            self.viewUpdater(.isLoading(false))
         }
+    }
+    
+    private func feedLessons(lessons: [LessonUIModel]) {
+        DispatchQueue.main.async { self.state = .feedLessons(lessons) }
+    }
+    
+    private func showError(errorMessage: String) {
+        DispatchQueue.main.async { self.state = .showError(errorMessage: errorMessage) }
     }
 }

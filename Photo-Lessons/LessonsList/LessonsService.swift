@@ -16,14 +16,14 @@ public protocol LessonsService {
                     completion: @escaping (Result<LessonsModel, Error>) -> Void)
 }
 
-final class LessonsServiceImplementation: LessonsService {
+public final class LessonsServiceImplementation: LessonsService {
     private let requester: Request
     
-    init(requester: Request = Request()) {
+    public init(requester: Request = Request()) {
         self.requester = requester
     }
     
-    func getLessons(request: RequestInfos, completion: @escaping (Result<LessonsModel, Error>) -> Void) {
+    public func getLessons(request: RequestInfos, completion: @escaping (Result<LessonsModel, Error>) -> Void) {
         requester.requestData(requestInfos: request) { [weak self] result in
             guard let self = self else { return }
             switch result {
