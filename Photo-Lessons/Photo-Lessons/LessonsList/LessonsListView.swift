@@ -28,7 +28,7 @@ struct LessonsListView: View {
             case let .feedLessons(lessons):
                 List(lessons, id: \.id) { item in
                     NavigationLink {
-                        LessonDetailView()
+                        SwiftUILessonDetailView()
                     } label: {
                         HStack {
                             AsyncImage(url: URL(string: item.thumbnail)) { image in

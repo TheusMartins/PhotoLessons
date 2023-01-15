@@ -8,7 +8,7 @@
 import UIKit
 import SwiftUI
 
-struct LessonDetailView: UIViewControllerRepresentable {
+struct SwiftUILessonDetailView: UIViewControllerRepresentable {
     func makeUIViewController(context: Context) -> LessonDetailViewController {
         return LessonDetailViewController()
     }
@@ -21,8 +21,9 @@ struct LessonDetailView: UIViewControllerRepresentable {
 }
 
 final class LessonDetailViewController: UIViewController {
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        view.backgroundColor = .blue
+    private let contentView: LessonDetailView = LessonDetailView(title: "This is a Test", description: "This is the description of the text")
+    
+    override func loadView() {
+        view = contentView
     }
 }
